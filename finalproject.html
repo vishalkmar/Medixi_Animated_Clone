@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
+   
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
+    <script src="./WOW-master/dist/wow.min.js"></script>
+    
+</head>
+<style>
+    *{
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+    }
+    .headercolor{
+             background-color: #27477d;
+       
+    }
+    .rowborder{
+         border: 2px solid red;
+    }
+    .colborder{
+            border: 2px  soild yellow;
+    }
+    .fontsize{
+          font-size: 16px;
+    }
+    .fontfamily{
+          font-family: Arial, Helvetica, sans-serif;
+    }
+    .samehover:hover{
+          color: rgb(113, 202, 240);
+    }
+   .lineheight{
+           line-height: 26px;
+   }
+   .iconhover:hover{
+           background-color: #27477d;
+           color: white;
+           transition: 1s;
+   }
+   .headerlisthover:hover{
+       color: #07ccec;
+       transition: 1s;
+   }
+   .headerlistcolor{
+      color: #27477d;
+      font-size: 1.1rem;
+      font-weight: bold;
+   }
+  .hidediv{
+       opacity: 0;
+       visibility: hidden;
+  }
+  .captionheading{
+      color: #27477d;
+      font-size: 3.6rem;
+      font-weight: bold;
+  }
+  .captionheadingone{
+      color: #fff;
+      font-size: 3.6rem;
+      font-weight: bold;
+  }
+  .captionbutton{
+       background-color: #27477d;
+       color: white;
+       font-family: sans-serif;
+       width: 200px;
+       border-radius: 30px;
+  }
+  .bordertry{
+     border: 1px solid #07ccec;   
+  }
+  .bordertry:hover{
+        border: 4px solid #07ccec;
+        transition: 0.5s linear;
+        border-radius: 10px;
+  }
+  .bordertry:hover .imgcard{
+        transform: skewX(-10deg);
+        transition: 0.5s linear;
+  }
+  .colorblue{
+     color: #27477d;
+  }
+  .colorblue:hover{
+       color: #07ccec;
+       transition: 1s linear;
+  }
+  .circlediv{
+         width: 100px;
+         height: 100px;
+         border-radius: 50%;
+         border: 10px solid white;
+         background-color: aqua;
+  }
+  .imagecontainer{
+            width: 100%;
+            background: linear-gradient(rgba(1,1,1,.2),rgba(1,1,1,.2)), url("https://t4.ftcdn.net/jpg/01/33/33/41/360_F_133334155_X23HzbJKawbIgXVaub4bPM8CjpkS5uMS.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+             height: auto;
+  }
+.borderall{
+         border: 5px solid red;
+}
+.sticky{
+        position: sticky;
+        top: 0;
+}
+.team{
+          height: 75vh;
+          background: url("team.jpg");
+          background-size: cover;        
+}
+.borderwhite{
+     border: 10px solid white;
+
+}
+.calbox{
+             display: flex;
+             line-height: 5px;
+             border-left: 5px solid #07ccec ;
+             background-color: white;
+             border-top-right-radius: 3px;
+             border-bottom-right-radius: 3px;
+}
+.learnmore{
+             border-radius: 30px;
+             background-color: #07ccec;
+             color: white;
+             font-weight: bold;
+             font-size: 1.2rem;
+}
+.iconsamediv{
+             height: 80px;
+             width: 80px;
+             border-radius: 50%;
+             border: 5px solid #07ccec;
+             background-color: white;
+             padding: 0px 30px 0px 30px;
+            
+}
+.listdivparent{
+     line-height: 40px;
+}
+.timeparentdiv{
+         border-left: 5px solid #07ccec;
+}
+.usecode{
+           border: 2px solid #07ccec;
+}
+.appointmentbtn{
+
+             background-color: #07ccec;
+             color: white;
+             font-weight: bold;
+             border-radius: 30px;
+              margin-left: 25%;
+}
+.bannerone{
+         padding: 0;
+         margin: 0;
+         width: 100%;
+         height: 80vh;
+         background: linear-gradient(rgba(1,1,80,.7),rgba(1,1,80,.7)), url("https://t4.ftcdn.net/jpg/03/30/27/41/360_F_330274196_C6mjMdPaTggBr4Jg45faWAwViexh7DoA.jpg");
+         background-repeat: no-repeat;
+         background-size: cover;
+}
+.backone{
+      /* background:url("backone.jpg"); */
+      background-repeat: no-repeat;
+      background-size: cover;
+       width: 100%;
+       height: 60vh;
+
+}
+.backsamediv{
+            position: relative;
+            top: 100%;
+            margin-top: -100px;
+            padding: 25px;
+        
+}
+.samesocial{
+             width: 60px;
+             height: 60px;
+             border-radius: 50%;
+             text-align: center;
+             padding-top: 15px;
+             margin: 5px;
+             background-color: #27477d;
+             /* border: 1px solid white; */
+}
+.samesocial:hover{
+             background-color: #07ccec;
+             transition: 1s linear;
+}
+img:hover{
+    transition: 0.5s;
+      transform: scale(1.1);
+}
+div{
+     overflow: hidden;
+}
+</style>
+<body>
+     <div class="container-fluid headercolor py-2" id="upper">
+               <div class="container animate__animated animate__fadeInDown wow">
+                    <div class="row justify-content-center justify-content-xl-between">
+                         <div class="col-auto">
+                            <ul class="nav list-unstyled">
+                                <li class="nav-item"><a href="" class="nav-link">
+                                    <i class="fa-regular fa-envelope"></i>
+                                         <span class="text-white"> support@hospital.com</span>
+                                    </a>
+                                    </li>
+                                <li class="nav-item"><a href="" class="nav-link">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                       <span class="text-white"> 36D Street Brooklyn, New York</span>
+                                    </a>
+                                    </li>
+                                <li class="nav-item"><a href="" class="nav-link">
+                                    <i class="fa-solid fa-clock"></i>
+                                       <span class="text-white">Mon - Fri: 8:00 am - 7:00 pm</span>
+                                    </a>
+                                    </li>
+                            </ul>
+                         </div>
+                         <div class="col-auto d-md-block d-sm-none">
+                                <ul class="list-unstyled nav">
+                                    <li>
+                                        <ul class="nav  list-unstyled">
+                                            <li class="nav-item"><a href="" class="nav-link samehover">
+                                                <i class="fa-brands fa-facebook  text-white"></i>
+                                            </a></li>
+                                            <li class="nav-item"><a href="" class="nav-link">
+                                                <i class="fa-brands fa-whatsapp text-white"></i>
+                                            </a></li>
+                                            <li class="nav-item"><a href="" class="nav-link">
+                                                <i class="fa-brands fa-twitter text-white"></i>
+                                            </a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                          <ul class="nav">
+                                             <li class="nav-item"><a href="" class="nav-link">
+                                                <i class="fa-solid fa-earth-americas text-white samehover"></i>
+                                             </a></li>
+                                             <a href="" class="nav-link dropdown dropdown-toggle samehover text-white" data-toggle="dropdown"><span class="samehover">English</span></a>
+                                              <div class="dropdown-menu">
+                                                <a href="" class="dropdown-item samehover">Hindi</a>
+                                                <a href="" class="dropdown-item samehover">Greek</a>
+                                                <a href="" class="dropdown-item samehover">French</a>
+                                                <a href="" class="dropdown-item samehover">Italian</a>
+                                                <a href="" class="dropdown-item samehover">Spanish</a>
+                                              </div>
+                                          </ul>
+                                    </li>
+                                </ul>
+                        </div>   
+                    </div>
+               </div>     
+     </div>
+     
+      <div class="container-fluid bg-light py-4  ">
+            <div class="container animate__animated animate__zoomIn">
+                 <div class="row justify-content-between">
+                     <div class="col-auto">
+                         <img src="logo.svg" alt="">
+                     </div>
+                     <div class="col-auto d-sm-none d-lg-block">
+                         <ul class="nav list-unstyled py-3">
+                            <li class="nav-item  "><a href="" class=" headerlistcolor nav-link  dropdown-toggle headerlisthover" data-toggle="dropdown">Home <span class="badge badge-danger">new</span></a>
+                                <div class="dropdown-menu" style="margin-left: -150px;">
+                                    <div class="container mt-5">
+                                        <div class="row">
+                                             <div class="col d-flex justify-content-between">
+                                                <div class="card dropdown-item">
+                                                            <img src="index-4.jpg" alt="" class="img-fluid card-img-top" >
+                                                            <div class="card-body">
+                                                                <button class="btn btn-primary" style="margin-left: -30px;">Home One</button>
+                                                            </div>
+                                               </div>
+                                               <div class="card dropdown-item">
+                                                            <img src="index-4.jpg" alt="" class="img-fluid card-img-top" >
+                                                            <div class="card-body">
+                                                                <button class="btn btn-primary" style="margin-left: -30px;">Home Two</button>
+                                                            </div>
+                                               </div>
+                                               <div class="card dropdown-item">
+                                                            <img src="index-4.jpg" alt="" class="img-fluid card-img-top" >
+                                                            <div class="card-body">
+                                                                <button class="btn btn-primary" style="margin-left: -30px;">Home Three</button>
+                                                            </div>
+                                                 </div>
+                                                <div class="card dropdown-item">
+                                                            <img src="index-4.jpg" alt="" class="img-fluid card-img-top" >
+                                                            <div class="card-body">
+                                                                <button class="btn btn-primary" style="margin-left: -30px;">Home Four</button>
+                                                            </div>
+                                               </div>
+
+                                               <div class="card dropdown-item">
+                                                        <img src="index-4.jpg" alt="" class="img-fluid card-img-top" >
+                                                        <div class="card-body">
+                                                            <button class="btn btn-primary" style="margin-left: -30px;">Home five</button>
+                                                        </div>
+                                                </div>
+
+                                                <div class="card dropdown-item">
+                                                        <img src="index-4.jpg" alt="" class="img-fluid card-img-top" >
+                                                        <div class="card-body">
+                                                            <button class="btn btn-primary" style="margin-left: -30px;">Home six</button>
+                                                        </div>
+                                                </div>
+
+                                                 <div class="card dropdown-item">
+                                                        <img src="index-4.jpg" alt="" class="img-fluid card-img-top" >
+                                                        <div class="card-body">
+                                                            <button class="btn btn-primary" style="margin-left: -30px;">Home Seven</button>
+                                                        </div>
+                                                </div>
+                                                <div class="card dropdown-item">
+                                                        <img src="index-4.jpg" alt="" class="img-fluid card-img-top" >
+                                                        <div class="card-body">
+                                                            <button class="btn btn-primary" style="margin-left: -30px;">Home Eight</button>
+                                                        </div>
+                                                </div>
+                                    </div>
+                                        </div>
+                                    </div>
+                               </div>
+                            </li>
+                              
+                            <li class="nav-item"><a href="" class=" headerlistcolor  nav-link  headerlisthover" >About</a></li>
+                            <li class="nav-item"><a href="" class=" headerlistcolor  nav-link dropdown-toggle dropdown headerlisthover" data-toggle="dropdown">Service</a>
+                                <div class="dropdown-menu">
+                                    <div class="dropdown-item">
+                                         <a href="" class="headerlistcolor">Services</a>
+                                    </div>
+                                    <div class="dropdown-item">
+                                        <a href="" class="headerlistcolor">Services Details</a>
+                                   </div>
+                           </div>
+                            </li>
+                               
+                            <li class="nav-item"><a href="" class=" headerlistcolor  nav-link dropdown-toggle headerlisthover" data-toggle="dropdown">Blog</a>
+                                <div class="dropdown-menu">
+                                    <div class="dropdown-item">
+                                         <a href="" class="headerlistcolor">Belog</a>
+                                    </div>
+                                    <div class="dropdown-item">
+                                        <a href="" class="headerlistcolor">Belog Details</a>
+                                   </div>
+                           </div>
+                            </li>
+                            <li class="nav-item"><a href="" class=" headerlistcolor  nav-link dropdown-toggle headerlisthover dropdown" id="pages" data-toggle="dropdown">Pages <span class="badge badge-danger">new</span></a>
+
+                                <div class="container bg-light dropdown-menu" id="con" style="margin-left: -400px;">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <h4>PageList One</h3><hr color="blue">
+                                              <ul class="list-unstyled">
+                                                <li><a href="" class="headerlistcolor">Home One</a></li>
+                                                <li><a href="" class="headerlistcolor">Home Two</a></li>
+                                                <li><a href="" class="headerlistcolor">Home Three</a></li>
+                                                <li><a href="" class="headerlistcolor">Home Four</a></li>
+                                                <li><a href="" class="headerlistcolor">Home five</a></li>
+                                                <li><a href="" class="headerlistcolor">Home Six <span class="badge badge-danger">new</span></a></li>
+                                                <li><a href="" class="headerlistcolor">Home Seven <span class="badge badge-danger">new</span></a></li>
+                                                <li><a href="" class="headerlistcolor">Home Eight <span class="badge badge-danger">new</span></a></li>
+                                              </ul>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <h4>PageList two</h3><hr color="blue">
+                                                <ul class="list-unstyled">
+                                                    <li><a href="" class="headerlistcolor ">About</a></li>
+                                                    <li><a href="" class="headerlistcolor">Services</a></li>
+                                                    <li><a href="" class="headerlistcolor">Services Details</a></li>
+                                                    <li><a href="" class="headerlistcolor">Team </a></li>
+                                                    <li><a href="" class="headerlistcolor">Team Details</a></li>
+                                                    
+                                                  </ul>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <h4>PageList three</h3><hr color="blue">
+                                                <ul class="list-unstyled">
+                                                    <li><a href="" class="headerlistcolor ">Project</a></li>
+                                                    <li><a href="" class="headerlistcolor">Our Shop <span class="badge badge-danger">new</span></a></li>
+                                                    <li><a href="" class="headerlistcolor">Shop Details <span class="badge badge-danger">new</span></a></li>
+                                                    <li><a href="" class="headerlistcolor">Shoping card <span class="badge badge-danger">new</span></a></li>
+                                                    <li><a href="" class="headerlistcolor">Checkout  <span class="badge badge-danger">new</span></a></li>
+                                                    
+                                                  </ul>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <h4>PageList four</h3><hr color="blue">
+                                                <ul class="list-unstyled">
+                                                    <li><a href="" class="headerlistcolor ">Blog</a></li>
+                                                    <li><a href="" class="headerlistcolor">Blog Details</a></li>
+                                                    <li><a href="" class="headerlistcolor">Appointment</a></li>
+                                                    <li><a href="" class="headerlistcolor">Contect Us</a></li>
+                                                    <li><a href="" class="headerlistcolor">Error Page</a></li>
+                                                    
+                                                  </ul>
+                                        </div>
+                                    </div>
+                               </div>
+                             </li>
+                            <li class="nav-item"><a href="" class=" headerlistcolor  nav-link  headerlisthover">Contect</a></li>
+                          
+                        </ul>
+                     </div>
+                     <div class="col-auto ">
+                           <ul class="nav py-3 justify-content-end">
+                                <li class="nav-item mx-2">
+                                     <button class="iconhover" style="border-radius: 50%; width: 50px; height: 50px; border: none;  background-color: #07ccec;"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                </li>
+                                <li class="nav-item mx-2" >
+                                     <button class="p-2 iconhover" style="border-radius: 50%; width: 50px; height: 50px; border: none; background-color: #07ccec;"><i class="fa-solid fa-bars"></i></button>
+                                </li>
+                           </ul>
+                     </div>
+                 </div>
+            </div>
+      </div>
+
+      <div class="container-fluid" style="padding: 0;">
+          <div class="carousel carousel-fade animate__animated animate__fadeInRight wow" data-ride="carousel" id="mycarousel">
+              <div class="carousel-inner">
+                <ol class="carousel-indicators">
+                     <li data-target="#mycarousel active" data-slide-to="0"></li>
+                     <li data-target="#mycarousel" data-slide-to="1"></li>
+                     <li data-target="#mycarousel" data-slide-to="2"></li>
+                </ol>
+                  <div class="carousel-item active">
+                      <img src="done.jpg" alt="" class="img-fluid">
+                       <div class="carousel-caption">
+                            <h1 class="text-left captionheading animate__animated animate__fadeInLeft wow">Best Medics, Doctors</h1>
+                            <h1 class="text-left captionheadingone animate__animated animate__fadeInRight wow">and Physicians</h1>
+                            <p class="text-left animate__animated animate__zoomIn">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit, nesciunt <br> dolorum. Voluptates corporis amet soluta non dolor tempore nulla quidem?</p>
+                            <button class="btn captionbutton py-3 float-left animate__animated animate__bounce wow">View All Services</button>
+                       </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="dtwo.jpg" alt="" class="img-fluid">
+                    <div class="carousel-caption">
+                        <h1 class="text-left captionheading animate__animated animate__fadeInLeft wow">Best Treatment for</h1>
+                        <h1 class="text-left captionheadingone animate__animated animate__fadeInRight wow">Healthy Life</h1>
+                        <p class="text-left animate__animated animate__zoomIn">Lorem ipsum, dolor sit amet consecteturbr  adipisicing elit. Fugit, nesciunt <br> dolorum. Voluptates corporis amet soluta non dolor tempore nulla quidem?</p>
+                        <button class="btn captionbutton py-3 float-left animate__animated animate__bounce wow">View All Services</button>
+                   </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="dthree.jpg" alt="" class="img-fluid">
+                    <div class="carousel-caption">
+                        <h1 class="text-left captionheading animate__animated animate__fadeInLeft wow">We Alway Put The</h1>
+                        <h1 class="text-left captionheadingone animate__animated animate__fadeInRight wow">Patient first</h1>
+                        <p class="text-left animate__animated animate__zoomIn">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit, nesciunt <br> dolorum. Voluptates corporis amet soluta non dolor tempore nulla quidem?</p>
+                        <button class="btn captionbutton py-3 float-left animate__animated animate__bounce wow">View All Services</button>
+                   </div>
+                </div>
+              </div>
+                <a href="#mycarousel" class="carousel-control-prev" data-slide="prev"></a>
+                <a href="#mycarousel" class="carousel-control-next" data-slide="next"></a>
+          </div>
+      </div>
+   
+<div class="container-fluid py-5">
+     <div class="container">
+            <div class="row animate__animated animate__fadeInUp wow">
+                  <div class="col">
+                     <h3 class="text-center" style="font-family: cursive; color: #07ccec;">Latest Jobs</h3>
+                     <h2 class="text-center" style="color: #27477d; font-size: 48px;">Our Services</h2>
+                     <p class="text-center" style="color: #888c92;">Proactively revolutionize granular customer service after pandemic internal or <br> "organic" sources proactive human capital rather.</p>
+                  </div>
+            </div>
+     </div>
+</div>
+  <div class="container py-5 my-5">
+      <div class="row">
+         <div class="col bordertry mx-3 animate__animated animate__fadeInLeft wow">
+                <div class="card">
+                      <img src="done.jpg" alt="" class="img-fluid card-img-top py-5 imgcard">
+                      <div class="circlediv mx-auto"  style="margin-top: -80px;"></div>
+                      <div class="card-body">
+                            <div class="card-title">
+                                 <h3 class="text-center colorblue">Medical Advice & Checkup</h3>
+                            </div>
+                            <div class="card-text">
+                                <p class="text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus veritatis recusandae porro.</p>
+                            </div>
+                      </div>
+                </div>
+         </div>
+         <div class="col mx-3 bordertry animate__animated animate__fadeInUp wow">
+            <div class="card">
+                <img src="dtwo.jpg" alt="" class="img-fluid card-img-top py-5 imgcard">
+                <div class="circlediv  mx-auto"  style="margin-top: -80px;">
+                  
+                </div>
+                <div class="card-body">
+                      <div class="card-title">
+                           <h3 class="text-center colorblue">Cordiovascular for Women's</h3>
+                      </div>
+                      <div class="card-text">
+                          <p class="text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus veritatis recusandae porro.</p>
+                      </div>
+                </div>
+          </div>
+         </div>
+         <div class="col mx-3 bordertry animate__animated animate__fadeInRight wow">
+            <div class="card">
+                <img src="dthree.jpg" alt="" class="img-fluid card-img-top py-5 imgcard" >
+                <div class="circlediv  mx-auto" style="margin-top: -80px;"></div>
+                <div class="card-body">
+                      <div class="card-title">
+                           <h3 class="text-center colorblue">Heart Check for Cordiovascular</h3>
+                      </div>
+                      <div class="card-text">
+                          <p class="text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus veritatis recusandae porro.</p>
+                      </div>
+                </div>
+          </div>
+         </div>
+      </div>
+  </div>  
+
+  <div class="container-fluid imagecontainer py-5">
+       <div class="container">
+          <div class="row">
+             <div class="col-md-5  my-5  py-5 animate__animated animate__fadeInLeft wow">
+                    <h2 style="color: white; font-family: italic;">Medical & General Care!</h2>
+                    <h1 class="" style="font-size: 3rem; color: #27477d;">Surprise your body with <span style="color: white;">extra care.</span></h1>
+                    <p class="text-light">Rapidiously evisculate user-centric functionalities for highly efficient interfaces. Competently leverage other's scalable technology before synergistic manufactured products.</p>
+                    <div class="calbox w-75 py-3">
+                        <div class="phoneicon mx-4 my-2">
+                            <i class="fa-solid fa-phone-flip" style="font-size: 40px; color: #07ccec;"></i>
+                        </div>
+                        <div class="caltext">
+                             <p class="text-muted">CALL ANYTIME 24/7</p>
+                              <h3 class="colorblue">+44-1234-5996</h3>
+                        </div>
+                    </div>
+                    <button class="btn learnmore w-50 mt-4">Learn More</button>
+                </div>
+                <div class="col-md-6  my-5 mx-2 animate__animated animate__zoomIn wow">
+                <div class="team w-100 borderwhite align-content-end">
+                    <div class="experience d-inline-block px-5 py-2" style="background-color:white; border-top-right-radius: 60px;">
+                        <h2 class="" style="font-size: 3rem; color: #07ccec;">187+</h2>
+                         <p class="text-muted">Year of experience</p>
+                    </div>
+                </div>
+             </div>
+          </div>
+       </div>
+  </div>
+
+      <div class="container shadow-lg" style="border-bottom-left-radius: 70px; border-bottom-right-radius: 70px;">
+           <div class="row justify-content-around py-5">
+               <div class="col-md-4 d-flex mt-2 animate__animated animate__fadeInLeft wow">
+                <div class="iconsamediv mx-3"></div>
+                <div class="expericencesamediv ">
+                    <h2 class="" style="font-size: 2rem; color: #07ccec;font-weight: bold;">30+</h2>
+                    <h4>Year of Experience</h4>
+                    <p>Incubate extensive scenarios without top-line Authoritatively engage</p>
+                </div>
+               </div>
+               <div class="col-md-4 d-flex mt-2 animate__animated animate__fadeInUp wow">
+                    <div class="iconsamediv mx-3"></div>
+                    <div class="expericencesamediv">
+                        <h2 class="" style="font-size: 2rem; color: #07ccec;font-weight: bold;">100+</h2>
+                        <h4>Year of Experience</h4>
+                        <p>Incubate extensive scenarios without top-line Authoritatively engage</p>
+                    </div>
+               </div>
+               <div class="col-md-4 d-flex mt-2 animate__animated animate__fadeInRight wow">
+                    <div class="iconsamediv mx-3"></div>
+                    <div class="expericencesamediv">
+                        <h2 class="" style="font-size: 2rem; color: #07ccec; font-weight: bold;">200+</h2>
+                        <h4>Year of Experience</h4>
+                        <p>Incubate extensive scenarios without top-line quality vectors. Authoritatively engage</p>
+                    </div>
+               </div>
+           </div>
+      </div>
+
+       <div class="container py-5 my-5">
+                <div class="row py-5" style="line-height: 30px;">
+                    <div class="col-md-6 animate__animated animate__fadeInDown wow">
+                         <h2 style="color: #07ccec; font-family: cursive;">Medical & General Care!</h2>
+                            <h1 class="" style="font-size: 3rem; color: #27477d;"> We’re Here For You</h1>
+                            <p class="text-muted">Proactively revolutionize granular customer service after pandemic internal or "organic" sources. Distinctively impact proactive human capital rather than client-centered benefits.</p>
+                            <div class="listdivparent d-flex">
+                                <div class="listdiv">
+                                 <ul class="list-unstyled">
+                                    <li style="color: #27477d; font-size: 1rem;"> <span style="color: #07ccec;">&#10003; &nbsp;</span>99% success rate</li>
+                                    <li style="color: #27477d; font-size: 1rem;"> <span style="color: #07ccec;">&#10003; &nbsp;</span>100% Confidential</li>
+                                    <li style="color: #27477d; font-size: 1rem;"> <span style="color: #07ccec;">&#10003; &nbsp;</span>Affordable Fees</li>
+                                 </ul>
+                            </div>
+                            <div class="listdiv mx-4">
+                                 <ul class="list-unstyled">
+                                    <li style="color: #27477d; font-size: 1rem;"> <span style="color: #07ccec;">&#10003; &nbsp;</span>Free Consultation</li>
+                                    <li style="color: #27477d; font-size: 1rem;"> <span style="color: #07ccec;">&#10003; &nbsp;</span>Expert surveillance agents</li>
+                                    <li style="color: #27477d; font-size: 1rem;"> <span style="color: #07ccec;">&#10003; &nbsp;</span>Over 50 years experience</li>
+                                 </ul>
+                            </div>
+                            </div>
+                              <div class="timeparentdiv w-75 d-flex justify-content-between">
+                                    <div class="sametime w-25">
+                                        <h3 style="color: #27477d;" class="font-weight-bold text-center">243</h3>
+                                         <p class="text-muted font-weight-bold text-uppercase text-center">days</p>
+                                    </div>
+                                    <div class="sametime w-25">
+                                        <h3 style="color: #27477d;" class="font-weight-bold text-center">5</h3>
+                                         <p class="text-muted font-weight-bold text-uppercase text-center">hours</p>
+                                    </div>
+                                    <div class="sametime w-25">
+                                        <h3 style="color: #27477d;" class="font-weight-bold text-center">15</h3>
+                                         <p class="text-muted font-weight-bold text-uppercase text-center">minutes</p>
+                                    </div>
+                                   
+                            </div>
+
+                              <div class="usecode w-50 py-3 my-5">
+                                    <h5 style="color: #27477d;" class="text-center">Use code : <span  style="color: #07ccec;" > Native</span></h5>
+                              </div>
+                    </div>
+                    <div class="col-md-6 shadow-lg animate__animated animate__fadeInUp wow" style="padding: 0;">
+                            <div class="appointparent d-flex w-100 headercolor h-auto py-5 justify-content-around align-items-center">
+                                <div class="caltext">
+                                    <h3 class="text-white">Book An Appointment</h3>
+                                    <p class="text-light">Please Call Us To Ensure</p>
+                                </div>
+                                <div class="phoneicon shadow-lg h-50 px-3 py-3" style="border-radius: 50%; background-color: #07ccec; border: 5px solid white;">
+                                    <i class="fa-solid fa-phone-flip" style="font-size: 30px; color: white;"></i>
+                                        </div>
+                            </div>
+
+                             <div class="formdiv  d-flex  px-5 py-5">
+                              <form action="" class="w-50">
+                                     <div class="form-group w-75 my-2 py-2" >
+                                         <select name="" id="" class="form-control" style="border-radius: 30px;">Select services
+                                            <option value="">Arisospace Medicone</option>
+                                            <option value="">Noraml medicine</option>
+                                            <option value="">Heart Medicine</option>
+                                            <option value="">Lever Medicine</option>
+                                         </select> 
+                                    </div>
+                                     <div class="input-group w-75 my-2 py-2">
+                                            <input type="text" class="form-control" value="Your name">
+                                            <div class="input-group-append">
+                                                <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
+                                            </div>
+                                     </div>
+                                        <div class="input-group w-75 my-2 py-2">
+                                            <input type="text" class="form-control" value="Your phone">
+                                            <div class="input-group-append">
+                                                <span class="input-group-text"><i class="fa-solid fa-phone"></i></span>
+                                            </div>
+                                     </div>
+                              </form>
+                               
+                                <form action="" class="w-50">
+                                     <div class="form-group w-75 my-2 py-2">
+                                         <select name="" id="" class="form-control">choose Doctor
+                                            <option value="">Arisospace Medicone</option>
+                                            <option value="">Noraml medicine</option>
+                                            <option value="">Heart Medicine</option>
+                                            <option value="">Lever Medicine</option>
+                                         </select> 
+                                    </div>
+                                    <div class="input-group w-75 my-2 py-2">
+                                            <input type="email" class="form-control" value="Your phone">
+                                            <div class="input-group-append">
+                                                <span class="input-group-text"><i class="fa-solid fa-envelope"></i></span>
+                                            </div>
+                                     </div>
+                                     <div class="input-group w-75 my-2 py-2">
+                                            <input type="date" class="form-control" value="Your phone">
+                                            <div class="input-group-append">
+                                                <span class="input-group-text"><i class="fa-solid fa-clock"></i></span>
+                                            </div>
+                                     </div>    
+                              </form>
+                             </div>
+                             <button class="btn appointmentbtn py-3 px-5">Make Appointment</button>
+                    </div>
+                    
+                </div>
+       </div>
+
+<div class="container-fluid bannerone py-5 my-auto animate__animated animate__zoomIn wow">
+     <div class="container">
+          <div class="row">
+             <div class="col">
+                <h3 class="text-center" style="font-family: cursive; color: #07ccec;">Latest Project</h3>
+                <h2 class="text-center" style="color: white; font-size: 48px;">Our Services</h2>
+                <p class="text-center" style="color: white;">Proactively revolutionize granular customer service after pandemic internal or <br> "organic" sources proactive human capital rather.</p>
+             </div>
+          </div>
+</div>
+</div>
+<div class="container-fluid mb-5" style="margin-top: -300px;">
+    <div class="container">
+        <div class="row py-5 ">
+            <div class="col mx-3 backone animate__animated animate__fadeInLeft wow" style="background: url('btwo.jpg');">
+                     <div class="backsamediv w-75 shadow-lg ml-5" style="background-color: white;">
+                         <p class="shadow text-muted text-center">New Surgin</p>
+                         <h3 class="text-center" style="color: #27477d;">Heart Surgery</h3>
+                     </div>
+            </div>
+            <div class="col mx-3 bockone d-sm-none d-md-block animate__animated animate__fadeInUp wow" style="background: url('btwo.jpg'); height: 60vh;">
+                <div class="backsamediv w-75 shadow-lg ml-5" style="background-color: white;">
+                    <p class="shadow text-muted text-center">Neww Surgin</p>
+                    <h3 class="text-center" style="color: #27477d;">lever Surgery</h3>
+                </div>
+            </div>
+            <div class="col mx-3 backone d-sm-none d-md-block animate__animated animate__fadeInRight wow " style="background: url('bthree.jpg');">
+                <div class="backsamediv shadow-lg w-75 ml-5" style="background-color: white;">
+                    <p class="shadow text-muted text-center">New Surgin</p>
+                    <h3 class="text-center" style="color: #27477d;">Heart Surgery</h3>
+                </div>
+            </div>
+</div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="container">
+        <div class="row justify-content-between">
+           <div class="col mx-3 py-3 px-5 d-flex animate__animated animate__fadeInLeft wow" style="background-color: #07ccec;">
+               <div class="handdiv mt-3">
+                   <img src="hath.png" alt="">
+               </div>
+                <div class="handcontent mx-2">
+                    <p class="text-white">Health Service</p>
+                    <h4 class="text-white">Known the truth for Peace </h4>
+                </div>
+           </div>
+           <div class="col mx-3 py-3 px-5 d-flex animate__animated animate__fadeInRight wow" style="background-color: #27477d;">
+              <div class="dabbadiv mt-3">
+                  <img src="dabba.png" alt="">
+              </div>
+              <div class="dabbacontent mx-2">
+                  <p class="text-white">Health Service</p>
+                  <h4 class="text-white">Known the truth for Peace </h4>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+
+<div class="container-fluid bg-light py-5  my-5">
+    <div class="container">
+        <div class="row">
+           <div class="col animate__animated animate__zoomIn wow">
+              <h3 class="text-center" style="font-family: cursive; color: #07ccec;">Testimonial</h3>
+              <h2 class="text-center" style="color: #27477d; font-size: 48px;">Patient Says</h2>
+              <p class="text-center text-muted">Proactively revolutionize granular customer service after pandemic internal or <br> "organic" sources proactive human capital rather.</p>
+           </div>
+        </div>
+        <div class="row justify-content-between my-5 py-5">
+             <div class="col-md-5 animate__animated animate__bounceInLeft wow">
+                   <div class="card">
+                       <div class="card-body">
+                            <p style="font-size: 1.2rem;color: #27477d;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium libero soluta alias autem ad repudiandae.</p>
+                             <div class="card-footer">
+                                    <h3 style="color: #27477d;">vishal kumar</h3>
+                                    <span style="color: #07ccec;">CEO host pvt Ltd.</span>
+                                    <span class="float-right text-warning">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                             </div>
+                        </div>
+                   </div>
+             </div>
+             <div class="col-md-5 animate__animated animate__bounceInRight wow">
+                <div class="card">
+                    <div class="card-body">
+                         <p style="font-size: 1.2rem;color: #27477d;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium libero soluta alias autem ad repudiandae.</p>
+                          <div class="card-footer">
+                                 <h3 style="color: #27477d;">vishal kumar</h3>
+                                 <span style="color: #07ccec;">CEO host pvt Ltd.</span>
+                                 <span class="float-right text-warning">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                          </div>
+                     </div>
+                </div>
+          </div>
+        </div>
+         
+        <div class="row py-5">
+            <div class="col animate__animated animate__zoomIn wow">
+               <h3 class="text-center" style="font-family: cursive; color: #07ccec;">Blog Posts</h3>
+               <h2 class="text-center" style="color: #27477d; font-size: 48px;">Latest News</h2>
+               <p class="text-center text-muted">Proactively revolutionize granular customer service after pandemic internal or <br> "organic" sources proactive human capital rather.</p>
+            </div>
+         </div>
+
+          <div class="row my-3">
+              <div class="col animate__animated animate__bounceInLeft wow">
+                 <div class="card">
+                    <img src="lone.jpg" class="img-fluid card-img-top" alt="" >
+                    <div class="card-body">
+                         <div class="card-header">
+                                <span class="text-muted">&#9993;Mental Health</span>
+                                <span class="text-muted float-right"><i class="fa-solid fa-user"></i>David Smith</span>
+                         </div>
+                          <div class="card-text">
+                              <h5 style="color: #27477d;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit, vero.</h5>
+                          </div>
+                          <div class="card-footer">
+                             <a href="" style="font-size: 1.3rem; color: #07ccec;">Ream More&nbsp; &rarr;</a>
+                          </div>
+                    </div>
+                 </div>
+              </div>
+              <div class="col animate__animated animate__bounceInUp wow">
+                <div class="card">
+                   <img src="ltwo.jpg" class="img-fluid card-img-top" alt="" >
+                   <div class="card-body">
+                        <div class="card-header">
+                               <span class="text-muted">&#9993;Mental Health</span>
+                               <span class="text-muted float-right"><i class="fa-solid fa-user"></i>David Smith</span>
+                        </div>
+                         <div class="card-text">
+                             <h5 style="color: #27477d;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit, vero.</h5>
+                         </div>
+                         <div class="card-footer">
+                            <a href="" style="font-size: 1.3rem; color: #07ccec;">Ream More&nbsp; &rarr;</a>
+                         </div>
+                   </div>
+                </div>
+             </div>
+             <div class="col animate__animated animate__bounceInRight wow">
+                <div class="card">
+                   <img src="lthree.jpg" class="img-fluid card-img-top" alt="" >
+                   <div class="card-body">
+                        <div class="card-header">
+                               <span class="text-muted">&#9993;Mental Health</span>
+                               <span class="text-muted float-right"><i class="fa-solid fa-user"></i>David Smith</span>
+                        </div>
+                         <div class="card-text">
+                             <h5 style="color: #27477d;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit, vero.</h5>
+                         </div>
+                         <div class="card-footer">
+                            <a href="" style="font-size: 1.3rem; color: #07ccec;">Ream More&nbsp; &rarr;</a>
+                         </div>
+                   </div>
+                </div>
+             </div>
+          </div>
+</div>
+</div>
+
+<div class="container-fluid bannerone animate__animated animate__zoomIn wow">
+     <div class="container">
+            <div class="row">
+                 <div class="col animate__animated animate__bounceInDown wow">
+                    <div class="logo bg-light py-5 px-4 w-50">
+                        <img src="logo.svg" alt="">
+                    </div>
+                 </div>
+                  <div class="col animate__animated animate__fadeInRight"> 
+                     <div class="sociallinksfooter d-flex float-md-right py-5">
+                          <div class=" samesocial"><i class="fa-brands fa-facebook" style="font-size: 2rem; color: white;"></i></div>
+                          <div class=" samesocial"><i class="fa-brands fa-whatsapp" style="font-size: 2rem; color: white;"></i></div>
+                          <div class=" samesocial"><i class="fa-brands fa-twitter" style="font-size: 2rem; color: white;"></i></div>
+                          <div class=" samesocial"><i class="fa-solid fa-clock" style="font-size: 2rem; color: white;"></i></div>
+                     </div>
+                  </div>
+            </div><hr>
+
+             <div class="row">
+                 <div class="col animate__animated animate__rubberBand wow">
+                       <div class="card bg-transparent">
+                            <div class="card-title">
+                                  <h3 class="text-white">About Us</h3>
+                                   <hr color="white" style="height: 5px; width: 50px; border-radius: 5px;">
+                            </div>
+                            <div class="card-text">
+                                <p class="text-white">Energistically reintermediate worldwide interfaces vis-a-vis emerging integrate leadership skills.</p>
+                                <h3 style="color: #07ccec;"><i class="fas fa-phone-volume"></i>&nbsp;123 4564 78945</h3>
+                            </div>
+                             <div class="card-footer">
+                                 <img src="banda.jpg" alt="" style="border-radius: 50%;">
+                                 <h5 class="text-white  d-inline">Dr. David Smith</h3> 
+                             </div>
+                       </div>
+                 </div>
+                 <div class="col animate__animated animate__rubberBand wow">
+                    <div class="card bg-transparent">
+                         <div class="card-title">
+                               <h3 class="text-white">Services</h3>
+                                <hr color="white" style="height: 5px; width: 50px; border-radius: 5px;">
+                         </div>
+                         <div class="card-text">
+                             <ul class="list-unstyled">
+                                <li><a href="" class="text-white font-weight-bold"><span class="text-info" style="font-size: 1.2rem;">&rarr;</span>&nbsp;&nbsp;Body Suggar</a></li>
+                                <li><a href="" class="text-white font-weight-bold"><span class="text-info" style="font-size: 1.2rem;">&rarr;</span>&nbsp;&nbsp;Major Operation</a></li>
+                                <li><a href="" class="text-white font-weight-bold"><span class="text-info" style="font-size: 1.2rem;">&rarr;</span>&nbsp;&nbsp;Child Care</a></li>
+                                <li><a href="" class="text-white font-weight-bold"><span class="text-info" style="font-size: 1.2rem;">&rarr;</span>&nbsp;&nbsp;Heart Surgury</a></li>
+                                <li><a href="" class="text-white font-weight-bold"><span class="text-info" style="font-size: 1.2rem;">&rarr;</span>&nbsp;&nbsp;Mental Health</a></li>
+                                <li><a href="" class="text-white font-weight-bold"><span class="text-info" style="font-size: 1.2rem;">&rarr;</span>&nbsp;&nbsp;Urgent Care</a></li>
+                             </ul>
+                         </div>
+                          </div>
+                    </div>
+
+                    <div class="col animate__animated animate__rubberBand wow">
+                        <div class="card bg-transparent">
+                             <div class="card-title">
+                                   <h3 class="text-white">Gallary Posts</h3>
+                                    <hr color="white" style="height: 5px; width: 50px; border-radius: 5px;">
+                             </div>
+                             <div class="card-text">
+                                    <div class="row">
+                                        <div class="col">
+                                             <img src="gone.jpg" alt="" class="m-1">
+                                             <img src="gtwo.jpg" alt="" class="m-1">
+                                             <img src="gthree.jpg" alt="" class="m-1">
+                                             <img src="gfour.jpg" alt="" class="m-1">
+                                             <img src="gfive.jpg" alt="" class="m-1">
+                                             <img src="gsix.jpg" alt="" class="m-1">
+                                        </div>
+                                    </div>  
+                              </div>
+                        </div>
+              </div>
+              <div class="col animate__animated animate__rubberBand wow">
+                <div class="card bg-transparent">
+                     <div class="card-title">
+                           <h3 class="text-white">Gallary Posts</h3>
+                            <hr color="white" style="height: 5px; width: 50px; border-radius: 5px;">
+                     </div>
+                     <div class="card-text">
+                            <div class="monday py-4">
+                                <span class="float-left text-white font-weight-bold">Mon-Fri </span>
+                                <span class="float-right text-white font-weight-bold">8:00 am - 8:00 pm</span>
+                            </div>
+                            <div class="Saturday py-4">
+                                <span class="float-left text-white font-weight-bold">Saturday</span>
+                                <span class="float-right text-white font-weight-bold">9:00 am - 6:00 pm</span>
+                            </div>
+                            <div class="Saturday py-4">
+                                <span class="float-left text-white font-weight-bold">Sunday</span>
+                                <span class="float-right text-white font-weight-bold">9:00 am - 6:00 pm</span>
+                            </div>
+                      </div>
+                       <div class="card-footer">
+                            <p><i class="fa-solid fa-location-dot mx-1" style="color: #07ccec; font-size: 1.2rem;"></i><a href="" class="text-white" style="font-size: 1.2rem;">374 William S Canning Blvd, Fall River MA 2721</a></p>
+                       </div>
+                </div>
+      </div>
+             </div>
+     </div>
+</div>
+
+<div class="container-fluid bg-info pt-4 animate__animated animate__fadeInUp wow">
+    <div class="container">
+         <div class="row">
+             <div class="col pt-2">
+                 <p class="text-white font-weight-bold">Copyright  2024 Medixi. All rights reserved by Vecuro.</p>
+             </div>
+             <div class="col">
+                 <ul class="nav float-right">
+                     <li class="nav-item"><a href="" class="nav-link text-white">Privacy</a></li>
+                     <li class="nav-item"><a href="" class="nav-link text-white">Terms</a></li>
+                     <li class="nav-item"><a href="" class="nav-link text-white">Conditions</a></li>
+                     <li class="nav-item"><a href="" class="nav-link text-white">About</a></li>
+                     <a  href="#upper" class="btn btn-light" style="font-size: 2rem; color: #07ccec;">&uparrow;</a>
+                 </ul>
+              
+             </div>
+         </div>
+    </div>
+</div>
+<script>
+    new WOW().init();
+    </script>
+</body>
+</html>
